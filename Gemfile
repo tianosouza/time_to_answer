@@ -11,6 +11,9 @@ gem "sprockets-rails"
 # Flexible authentication solution for Rails with Warden
 gem "devise"
 
+# Spinner for Rake Task
+gem "tty-spinner"
+
 # Internationalization and localization support
 gem "rails-i18n" 
 
