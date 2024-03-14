@@ -1,6 +1,7 @@
 namespace :dev do
 
   DEFAULT_PASSWORD = 123456
+  
   desc "Config development environment"
   task setup: :environment do
     if Rails.env.development?
@@ -38,6 +39,4 @@ namespace :dev do
       password_confirmation: DEFAULT_PASSWORD
     )
   end
-
-
 end
