@@ -1,2 +1,19 @@
 <h1>Home::Welcome#index</h1>
 <p>Find me in app/views/home/welcome/index.html.erb</p>
+
+<% if user_signed_in? %>
+    <p>User está Logado</p>
+    <p><%= current_user.email %></p>
+    <%= link_to 'Efetuar logoff…[User]', destroy_user_session_path, data: { "turbo-method": :delete } %>
+<% else  %>
+    <p>User não está Logado</p>
+<% end %>
+
+<% if admin_signed_in? %>
+    <p>Admin está Logado</p>
+    <p><%= current_admin.email %></p>
+    <%= link_to 'Efetuar logoff…[Admin]', destroy_admin_session_path, data: { "turbo-method": :delete } %>
+<% else  %>
+    <p>Admin não está Logado</p>
+<% end %>
+
